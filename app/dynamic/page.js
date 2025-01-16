@@ -1,10 +1,10 @@
 // "use client"
-// import React from "react";
+import React from "react";
 import { getCatFacts } from "../api/api";
 import Button from "../component/button";
 
-export default async function Static() {
-  const catfact = await getCatFacts();
+export default async function Dynamic() {
+  const catfact = await getCatFacts("dynamic");
   console.log(catfact);
   return (
     <div>
@@ -13,7 +13,7 @@ export default async function Static() {
       uppercase text-blue-800 font-bold
       "
       >
-        Hello,from static
+        Hello,from Dynamic
       </h1>
       <div>
         <p className="text-center text-2xl mt-10">Here is a random cat fact:</p>
